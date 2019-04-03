@@ -37,9 +37,14 @@ AuthorSchema
 AuthorSchema
 .virtual('Genre')
 .get(function () {
-  return this.genre;
+  return this.media;
 });
+
+
 
 
 //Export model
 module.exports = mongoose.model('Author', AuthorSchema);
+
+
+
