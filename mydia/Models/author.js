@@ -5,32 +5,41 @@ var Schema = mongoose.Schema;
 var AuthorSchema = new Schema(
   {
     first_name: {type: String, required: true, max: 100},
-    family_name: {type: String, required: true, max: 100},
-    date_of_birth: {type: Date},
-    date_of_death: {type: Date},
+    last_name: {type: String, required: true, max: 100},
+    date_of_publication: {type: Date},
+    media: {type: String, required: true, max: 100},
+    genre: {type: String, required: true, max: 100},
   }
 );
 
 // Author's name
 AuthorSchema
-.virtual('name')
+.virtual('Name')
 .get(function () {
-  return this.family_name + ', ' + this.first_name;
+  return this.last_name + ', ' + this.first_name;
 });
 
-// Virtual for author's lifespan
+// Virtual for date of work publication
 AuthorSchema
-.virtual('lifespan')
+.virtual('Date of publication')
 .get(function () {
-  return (this.date_of_death.getYear() - this.date_of_birth.getYear()).toString();
+  return (this.date_of_publication.getYear() - this.date_of_publication.getYear()).toString();
 });
 
-// Virtual for author's URL
+// Virtual for Media Type
 AuthorSchema
-.virtual('url')
+.virtual('Media')
 .get(function () {
-  return '/catalog/author/' + this._id;
+  return this.media;
 });
+
+// Virtual for Media Genre
+AuthorSchema
+.virtual('Genre')
+.get(function () {
+  return this.genre;
+});
+
 
 //Export model
 module.exports = mongoose.model('Author', AuthorSchema);
