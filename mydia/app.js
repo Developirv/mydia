@@ -10,6 +10,21 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+// import mongoose module
+
+var mongoose = require('mongoose');
+// set up my default mongoose connect
+
+var mongoDB = 'mongodb+srv://mydiauser:<MongoDBpassword>@cluster0-xaog7.mongodb.net/mydia?retryWrites=true';
+mongoose.connect(mongoDB, {useNewUrlParser: true });
+
+// get the default connect
+
+var db = mongoose.connection;
+
+// bind connect to error event 
+
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
