@@ -1,6 +1,6 @@
-var async = require('async')
+//var async = require('async')
 var Author = require('./models/author')
-var Media = require('./models/media')
+//var Media = require('./models/media')
 
 
 var mongoose = require('mongoose');

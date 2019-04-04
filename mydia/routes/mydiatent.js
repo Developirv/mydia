@@ -13,28 +13,28 @@ var author_controller = require('../controllers/authorController');
 router.get('/', media_controller.index);
 
 // GET request for creating a new media. NOTE This must come before routes that display media (uses id).
-router.get('/media/create', media_controller.media_create_get);
+router.get('/mydiatent/create', media_controller.media_create_get);
 
 // POST request for creating Book.
-router.post('/media/create', media_controller.media_create_post);
+router.post('/mydiatent/create', media_controller.media_create_post);
 
 // GET request to delete Book.
-router.get('/media/:id/delete', media_controller.media_delete_get);
+router.get('/mydiatent/:id/delete', media_controller.media_delete_get);
 
 // POST request to delete .
-router.post('/media/:id/delete', media_controller.media_delete_post);
+router.post('/mydiatent/:id/delete', media_controller.media_delete_post);
 
 // GET request to update Media.
-router.get('/media/:id/update', media_controller.media_update_get);
+router.get('/mydiatent/:id/update', media_controller.media_update_get);
 
 // POST request to update Media.
-router.post('/media/:id/update', media_controller.media_update_post);
+router.post('/mydiatent/:id/update', media_controller.media_update_post);
 
-// GET request for one Book.
-router.get('/media/:id', media_controller.media_detail);
+// GET request for one Media.
+router.get('/mydiatent/:id', media_controller.media_detail);
 
-// GET request for list of all Book items.
-router.get('/medias', media_controller.media_list);
+// GET request for list of all Media items.
+router.get('/mydiatent', media_controller.media_list);
 
 /// AUTHOR ROUTES ///
 
