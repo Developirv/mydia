@@ -7,7 +7,7 @@ var media_controller = require('../controllers/mediaController');
 var author_controller = require('../controllers/authorController');
 
 
-/// BOOK ROUTES ///
+/// Media ROUTES ///
 
 // GET Mydia home page.
 router.get('/', media_controller.index);
@@ -15,13 +15,13 @@ router.get('/', media_controller.index);
 // GET request for creating a new media. NOTE This must come before routes that display media (uses id).
 router.get('/mydiatent/create', media_controller.media_create_get);
 
-// POST request for creating Book.
+// POST request for creating new Media.
 router.post('/mydiatent/create', media_controller.media_create_post);
 
-// GET request to delete Book.
+// GET request to delete Media.
 router.get('/mydiatent/:id/delete', media_controller.media_delete_get);
 
-// POST request to delete .
+// POST request to delete Media .
 router.post('/mydiatent/:id/delete', media_controller.media_delete_post);
 
 // GET request to update Media.
@@ -38,7 +38,7 @@ router.get('/mydiatent', media_controller.media_list);
 
 /// AUTHOR ROUTES ///
 
-// GET request for creating Author. NOTE This must come before route for id (i.e. display author).
+// GET request for creating Author. 
 router.get('/author/create', author_controller.author_create_get);
 
 // POST request for creating Author.
