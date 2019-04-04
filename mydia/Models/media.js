@@ -16,15 +16,15 @@ var MediaSchema = new Schema(
 MediaSchema
 .virtual('url')
 .get(function () {
-  return '/catalog/media/' + this._id;
+  return '/mydiatent/media/' + this._id;
 });
 
 // Virtual for date of work publication *this may need to go elsewhee
-AuthorSchema
-.virtual('Date of publication')
-.get(function () {
-  return (this.date_of_publication.getYear() - this.date_of_publication.getYear()).toString();
-});
+//AuthorSchema
+//.virtual('Date of publication')
+//.get(function () {
+  //return (this.date_of_publication.getYear() - this.date_of_publication.getYear()).toString();
+//});
 
 
 //Export model
