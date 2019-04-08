@@ -6,9 +6,7 @@ MYDIA- a roof for the creative.
 
 Mydia is an application that allows writers to post about their work.
 
-A user can add content they want others to discover and search for content that other creators recommend.
 
-If you enjoy a creator's Midia tent, search by Media for other works.
 
 Screenshot(s):
 
