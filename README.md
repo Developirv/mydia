@@ -1,4 +1,4 @@
-## Mydia
+## Mydia WDI-CC-6 Project #2: Node/Express/MongoDB Full-stack CRUD Application
 
 WDI-CC-6 Project #2: Node/Express/MongoDB Full-stack CRUD Application
 
